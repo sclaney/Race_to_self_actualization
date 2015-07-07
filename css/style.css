@@ -27,6 +27,7 @@ body{
   border: 1px solid black;
   margin: -85px auto;
   padding: 5px;
+  font-size: 15px;
 }
 
 #response{
@@ -34,9 +35,17 @@ body{
   margin: 120px auto;
 }
 
-.main .button{
-  margin: 0 auto;
+.main #button{
+  margin: -70px 0 0 300px;
   position: relative;
+}
+
+textarea{
+  height: 212px;
+  width: 712px;
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 15px;
 }
 
 

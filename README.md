@@ -27,3 +27,11 @@
 - As a player, I want the name of whoever's turn it is to be highligted so I know whose turn it is
 - As a psych-nerd, I want information on each level of the pyramid to learn more about the heirarchy
 - As a psych-nerd, I want all the prompts to be relevant to the level of needs I'm trying to fulfill
+
+##Technologies
+
+##Design
+
+##Get Started
+
+##Next Steps

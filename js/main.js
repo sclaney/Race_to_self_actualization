@@ -9,7 +9,7 @@ var prompts = ['This is the first prompt, it is not meant to really mean anythin
 // Here's the event listener that loads a new prompt when the button is clicked
 // It still needs more logic to delete a prompt once it has been used once.
 // It also needs to only be clickable when a round is over
-button.on('click', nextPrompt);
+button.addEventListener('click', nextPrompt);
 
 function nextPrompt(){  
   prompts.shift();

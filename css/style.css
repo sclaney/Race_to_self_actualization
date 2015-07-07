@@ -1,6 +1,49 @@
+body{
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+}
 
-  body{
-    padding: 0;
-    margin: 0;
-  }
+.header{
+  height: 200px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: lightblue;
+  text-align: center;
+}
+
+.main{
+  height: 500px;
+  width: 700px;
+  margin:0 auto;
+}
+
+#prompt{
+  position: relative;
+  height: 200px;
+  width: 700px;
+  text-align: left;
+  background-color: white;
+  border: 1px solid black;
+  margin: -85px auto;
+  padding: 5px;
+}
+
+#response{
+  position: relative;
+  margin: 120px auto;
+}
+
+.main .button{
+  margin: 0 auto;
+  position: relative;
+}
+
+
+
+
+
+
+
+
 

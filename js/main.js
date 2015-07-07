@@ -17,7 +17,7 @@ function nextPrompt(){
 }
 
 function updatePrompt() {
-  prompt.html(prompts[0]);
+  prompt.innerHTML = prompts[0];
 }
 
 

@@ -1,6 +1,7 @@
 var prompt = document.getElementById('prompt');
 var response = document.getElementById('response');
 var button = document.getElementById('button');
+document.getElementById('button').disabled = true;
 var textarea = document.getElementsByTagName('textarea');
 
 // This is the array that holds all the prompts
@@ -20,6 +21,13 @@ function nextPrompt(){
 
 function updatePrompt() {
   prompt.innerHTML = prompts[0];
+  resetStuff();
+}
+
+function resetStuff() {
+  $('textarea').val(' ');
+  input = " ";
+  document.getElementById('button').disabled = true;
 }
 
 
@@ -35,7 +43,7 @@ $('textarea').keypress(function() {
   console.log(input);
   if(input === $.trim($('#prompt').html())) {
     alert("You did it!");
-    input = "";
+    document.getElementById('button').disabled = false;
     return true;
   }
 });
@@ -47,6 +55,5 @@ $('textarea').keydown(function() {
   }
 });
 
-// $('textarea').keypress(function() {
-// });
+
 

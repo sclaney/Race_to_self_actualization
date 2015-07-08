@@ -64,12 +64,12 @@ $('textarea').keypress(function() {
     totalTime = ((endTimer - startTimer)/1000); //polluted the global here by taking away var
     alert("You did it! It took " + totalTime + " seconds to finish.");
     document.getElementById('button').disabled = false;
+    playerSwitch();
     if (whichPlayer === 'Player1') {
       P1Time = totalTime;
-    } else {
+    } else if (whichPlayer === 'Player2'){
       P2Time = totalTime;
     }
-    playerSwitch();
     return true;
   }
 });
@@ -83,11 +83,13 @@ $('textarea').keydown(function() {
 
 
 // This is where the win logic will go, it will compare P1Time to P2Time to determine the winner
-if (P1Time < P2Time) {
-  alert('Player 1 has won this round!');
-  P1Total++;
-} else if (P2Time < P1Time){
-  alert('Player 2 has won this round!');
-  P2Total++;
+function getRoundWinner(){
+  if (P1Time < P2Time) {
+    alert('Player 1 has won this round!');
+    P1Total++;
+  } else if (P2Time < P1Time){
+    alert('Player 2 has won this round!');
+    P2Total++;
+  }
 }
 

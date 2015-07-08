@@ -1,8 +1,8 @@
-var prompt = document.getElementById('prompt');
+var prompt = document.getElementById('prompt'); // var prompt = $("#prompt")
 var response = document.getElementById('response');
 var button = document.getElementById('button');
-document.getElementById('button').disabled = true;
-var textarea = document.getElementsByTagName('textarea');
+button.disabled = true;
+var textarea = document.querySelector('textarea'); //var textarea = $('textarea')
 var P1Time; //This variable will hold the time it took player 1 to complete the prompt
 var P2Time; //This variable will hold the time it took player 2 to complete the prompt
 var P1Total; //This variable will keep track of how many rounds player 1 has won
@@ -53,7 +53,7 @@ function updatePrompt() {
 function resetStuff() {
   $('textarea').val(' ');
   input = " ";
-  document.getElementById('button').disabled = true;
+  button.disabled = true;
 }
 
 /////////////////////////////BUTTON CLICK///////////////////////////////////////
@@ -67,6 +67,7 @@ function resetStuff() {
 // it should be able to disable the response box so you can't type in it anymore
 var input = "";
 
+// Write in English what is happening here. Write procedures happening on keypress as function to modularize. 
 $('textarea').keypress(function() {
   console.log(String.fromCharCode(event.which));
   input = input + String.fromCharCode(event.which);

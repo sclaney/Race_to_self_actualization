@@ -17,7 +17,7 @@ var whichPlayer = 'Player1';
 
 // This function switches the player when it's called
 function playerSwitch() {
-  if (whichPlayer = 'Player1') {
+  if (whichPlayer === 'Player1') {
     whichPlayer = 'Player2';
   } else {
     whichPlayer = 'Player1';

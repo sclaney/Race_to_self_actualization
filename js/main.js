@@ -9,6 +9,9 @@ var P1Total; //This variable will keep track of how many rounds player 1 has won
 var P2Total; //This variable will keep track of how many rounds player 2 has won
 
 
+/////////////////////////////SWITCH PLAYER//////////////////////////////////////
+
+
 // This is the variable that holds which player is currently playing
 var whichPlayer = 'Player1';
 
@@ -20,6 +23,11 @@ function playerSwitch() {
     whichPlayer = 'Player1';
   }
 }
+
+/////////////////////////////SWITCH PLAYER//////////////////////////////////////
+
+
+/////////////////////////////BUTTON CLICK///////////////////////////////////////
 
 
 // This is the array that holds all the prompts
@@ -48,6 +56,11 @@ function resetStuff() {
   document.getElementById('button').disabled = true;
 }
 
+/////////////////////////////BUTTON CLICK///////////////////////////////////////
+
+
+
+/////////////////////////////KEYBOARD PRESS/////////////////////////////////////
 
 //This will be the logic that states that if the text in the response box is
 // equal to the text in the prompt, the round will end.
@@ -69,6 +82,7 @@ $('textarea').keypress(function() {
       P1Time = totalTime;
     } else if (whichPlayer === 'Player2'){
       P2Time = totalTime;
+      getRoundWinner(); //trying to get the round winner, not sure if this is right
     }
     return true;
   }
@@ -81,6 +95,11 @@ $('textarea').keydown(function() {
   }
 });
 
+/////////////////////////////KEYBOARD PRESS/////////////////////////////////////
+
+
+/////////////////////////////WIN LOGIC//////////////////////////////////////////
+
 
 // This is where the win logic will go, it will compare P1Time to P2Time to determine the winner
 function getRoundWinner(){
@@ -92,4 +111,7 @@ function getRoundWinner(){
     P2Total++;
   }
 }
+
+/////////////////////////////WIN LOGIC//////////////////////////////////////////
+
 

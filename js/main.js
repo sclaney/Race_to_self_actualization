@@ -4,9 +4,12 @@ var button = document.getElementById('button');
 document.getElementById('button').disabled = true;
 var textarea = document.getElementsByTagName('textarea');
 
+
+
+
+
 // This is the array that holds all the prompts
-var prompts = ['This', 'This is the first prompt, it is not meant to really mean anything',
-'This is the second prompt', 'This is the third prompt'];
+var prompts = ['This','This is the first prompt, it is not meant to really mean anything','This is the second prompt','This is the third prompt'];
 
 // Here's the event listener that loads a new prompt when the button is clicked
 // It still needs more logic to delete a prompt once it has been used once.
@@ -17,6 +20,7 @@ function nextPrompt(){
   var shiftedValue = prompts.shift();
   prompts.push(shiftedValue);
   updatePrompt();
+  startTimer = new Date().getTime();//Might move this later
 }
 
 function updatePrompt() {
@@ -42,8 +46,11 @@ $('textarea').keypress(function() {
 
   console.log(input);
   if(input === $.trim($('#prompt').html())) {
-    alert("You did it!");
+    var endTimer = new Date().getTime();
+    var totalTime = ((endTimer - startTimer)/1000);
+    alert("You did it! It took " + totalTime + " seconds to finish.");
     document.getElementById('button').disabled = false;
+    console.log(totalTime);
     return true;
   }
 });
@@ -54,6 +61,5 @@ $('textarea').keydown(function() {
     console.log(input);
   }
 });
-
 
 

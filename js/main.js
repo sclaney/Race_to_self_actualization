@@ -17,9 +17,10 @@ var whichPlayer = 'Player1';
 
 // This function switches the player when it's called
 function playerSwitch() {
-  if (whichPlayer = 'Player1') {
+  if (whichPlayer === 'Player1') {
     whichPlayer = 'Player2';
-  } else {
+  } else if (whichPlayer === 'Player2') {
+    getRoundWinner();
     whichPlayer = 'Player1';
   }
 }
@@ -31,7 +32,7 @@ function playerSwitch() {
 
 
 // This is the array that holds all the prompts
-var prompts = ['This','This is the first prompt, it is not meant to really mean anything','This is the second prompt','This is the third prompt'];
+var prompts=['This','First prompt','Second prompt','This is the third prompt'];
 
 // Here's the event listener that loads a new prompt when the button is clicked
 // It still needs more logic to delete a prompt once it has been used once.
@@ -53,6 +54,7 @@ function updatePrompt() {
 function resetStuff() {
   $('textarea').val(' ');
   input = " ";
+  totalTime = " ";
   document.getElementById('button').disabled = true;
 }
 
@@ -82,7 +84,6 @@ $('textarea').keypress(function() {
       P1Time = totalTime;
     } else if (whichPlayer === 'Player2'){
       P2Time = totalTime;
-      getRoundWinner(); //trying to get the round winner, not sure if this is right
     }
     return true;
   }
@@ -103,13 +104,15 @@ $('textarea').keydown(function() {
 
 // This is where the win logic will go, it will compare P1Time to P2Time to determine the winner
 function getRoundWinner(){
-  if (P1Time < P2Time) {
-    alert('Player 1 has won this round!');
-    P1Total++;
-  } else if (P2Time < P1Time){
-    alert('Player 2 has won this round!');
-    P2Total++;
-  }
+  console.log("Player one's time: " + P1Time);
+  console.log("Player two time: " + P2Time);
+  // if (P1Time < P2Time) {
+  //   alert('Player 1 has won this round!');
+  //   P1Total++;
+  // } else if (P2Time < P1Time){
+  //   alert('Player 2 has won this round!');
+  //   P2Total++;
+  // }
 }
 
 /////////////////////////////WIN LOGIC//////////////////////////////////////////

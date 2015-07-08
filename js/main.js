@@ -3,9 +3,23 @@ var response = document.getElementById('response');
 var button = document.getElementById('button');
 document.getElementById('button').disabled = true;
 var textarea = document.getElementsByTagName('textarea');
+var P1Time; //This variable will hold the time it took player 1 to complete the prompt
+var P2Time; //This variable will hold the time it took player 2 to complete the prompt
+var P1Total; //This variable will keep track of how many rounds player 1 has won
+var P2Total; //This variable will keep track of how many rounds player 2 has won
 
 
+// This is the variable that holds which player is currently playing
+var whichPlayer = 'Player1';
 
+// This function switches the player when it's called
+function playerSwitch() {
+  if (whichPlayer = 'Player1') {
+    whichPlayer = 'Player2';
+  } else {
+    whichPlayer = 'Player1';
+  }
+}
 
 
 // This is the array that holds all the prompts
@@ -47,10 +61,15 @@ $('textarea').keypress(function() {
   console.log(input);
   if(input === $.trim($('#prompt').html())) {
     var endTimer = new Date().getTime();
-    var totalTime = ((endTimer - startTimer)/1000);
+    totalTime = ((endTimer - startTimer)/1000); //polluted the global here by taking away var
     alert("You did it! It took " + totalTime + " seconds to finish.");
     document.getElementById('button').disabled = false;
-    console.log(totalTime);
+    if (whichPlayer === 'Player1') {
+      P1Time = totalTime;
+    } else {
+      P2Time = totalTime;
+    }
+    playerSwitch();
     return true;
   }
 });
@@ -62,4 +81,13 @@ $('textarea').keydown(function() {
   }
 });
 
+
+// This is where the win logic will go, it will compare P1Time to P2Time to determine the winner
+if (P1Time < P2Time) {
+  alert('Player 1 has won this round!');
+  P1Total++;
+} else if (P2Time < P1Time){
+  alert('Player 2 has won this round!');
+  P2Total++;
+}
 

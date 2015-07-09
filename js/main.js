@@ -47,6 +47,13 @@ function nextPrompt(){
   prompts.push(shiftedValue);
   updatePrompt();
   resetStartTime();
+  if (whichPlayer === 'Player1') {
+    player1Select.css('background-color', 'blue');
+    player2Select.css('background-color', 'gray');
+  } else if (whichPlayer === 'Player2') {
+    player2Select.css('background-color', 'blue');
+    player1Select.css('background-color', 'gray');
+  }
 }
 
 function resetStartTime() {
@@ -127,8 +134,10 @@ function getRoundWinner(){
 function getGameWinner() {
   if (P1Total === 5) {
     alert('GAME OVER! PLAYER 1 WINS!!!!');
+    button.prop('disabled', true);
   } else if (P2Total === 5) {
     alert('GAME OVER! PLAYER 2 WINS!!!!');
+    button.prop('disabled', true);
   }
 }
 

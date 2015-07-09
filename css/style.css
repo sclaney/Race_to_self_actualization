@@ -67,54 +67,54 @@ textarea{
   width: 900px;
   height: 900px;
 
-  margin: -105 0 0 20px;
+  margin: -145 0 0 20px;
 
 }
 
 .triangle1 .T1R1{
   height: 50px;
   width: 300px;
-  background-color: red;
+  background-color: gray;
 }
 
 .triangle1 .T1R2{
   height: 50px;
   width: 300px;
-  background-color: red;
+  background-color: gray;
 
-  margin: -105 0 0 0px;
+  margin: -102 0 0 0px;
 }
 
 .triangle1 .T1R3{
   height: 50px;
   width: 300px;
-  background-color: red;
+  background-color: gray;
 
-  margin: -105 0 0 0px;
+  margin: -102 0 0 0px;
 }
 
 .triangle1 .T1R4{
   height: 50px;
   width: 300px;
-  background-color: red;
+  background-color: gray;
 
-  margin: -105 0 0 0px;
+  margin: -102 0 0 0px;
 }
 
 .triangle1 .T1R5{
   height: 50px;
   width: 300px;
-  background-color: red;
+  background-color: gray;
 
-  margin: -105 0 0 0px;
+  margin: -102 0 0 0px;
 }
 
 .triangle1 .player1{
   height: 50px;
   width: 300px;
-  background-color: red;
+  background-color: gray;
 
-  margin: -105 0 0 0px;
+  margin: -135 0 0 0px;
 }
 
 .triangle2 {
@@ -127,47 +127,47 @@ textarea{
 .triangle2 .T2R1{
   height: 50px;
   width: 300px;
-  background-color: red;
+  background-color: gray;
 }
 
 .triangle2 .T2R2{
   height: 50px;
   width: 300px;
-  background-color: red;
+  background-color: gray;
 
-  margin: -105 0 0 0px;
+  margin: -102 0 0 0px;
 }
 
 .triangle2 .T2R3{
   height: 50px;
   width: 300px;
-  background-color: red;
+  background-color: gray;
 
-  margin: -105 0 0 0px;
+  margin: -102 0 0 0px;
 }
 
 .triangle2 .T2R4{
   height: 50px;
   width: 300px;
-  background-color: red;
+  background-color: gray;
 
-  margin: -105 0 0 0px;
+  margin: -102 0 0 0px;
 }
 
 .triangle2 .T2R5{
   height: 50px;
   width: 300px;
-  background-color: red;
+  background-color: gray;
 
-  margin: -105 0 0 0px;
+  margin: -102 0 0 0px;
 }
 
 .triangle2 .player2{
   height: 50px;
   width: 300px;
-  background-color: red;
+  background-color: gray;
 
-  margin: -105 0 0 0px;
+  margin: -135 0 0 0px;
 }
 
 

@@ -85,10 +85,8 @@ textarea.keypress(function() {  //when there is a keypress in the textarea
     button.prop('disabled', false); //then the button becomes clickable to start the next round
     if (whichPlayer === 'Player1') { //then we say if the player is player 1
       P1Time = totalTime; //add this total time to the variable for their time
-      P1Total += 1;
     } else if (whichPlayer === 'Player2'){ //and if it's player 2
       P2Time = totalTime; //add the time to the variable that holds player 2's time
-      P2Total += 1;
     }
       playerSwitch(); //then we switch the player turns WHICH WE DO AFTER THE IF STATEMENT
     return true;
@@ -114,10 +112,10 @@ function getRoundWinner(){
   console.log("Player two time: " + P2Time);
   if (P1Time < P2Time) {
     alert('Player 1 has won this round!');
-    P1Total++;
+    P1Total += 1;
   } else if (P2Time < P1Time){
     alert('Player 2 has won this round!');
-    P2Total++;
+    P2Total += 1;
   }
 }
 
@@ -127,6 +125,7 @@ function getGameWinner() {
   } else if (P2Total) {
     alert('GAME OVER! PLAYER 2 WINS!!!!');
   }
+  //button.click(resetGame);
 }
 
 function resetGame() {
@@ -138,5 +137,4 @@ function resetGame() {
 }
 
 /////////////////////////////WIN LOGIC//////////////////////////////////////////
-
 

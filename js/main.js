@@ -1,7 +1,7 @@
 var prompt = $('#prompt');
 var response = $('#response');
 var button = $('#button');
-button.prop('disabled', true);
+button.prop('disabled', false);
 var textarea = $('textarea');
 var P1Time; //This variable will hold the time it took player 1 to complete the prompt
 var P2Time; //This variable will hold the time it took player 2 to complete the prompt
@@ -61,6 +61,8 @@ function resetStuff() {
   input = " ";
   button.prop('disabled', true);
 }
+
+
 
 /////////////////////////////BUTTON CLICK///////////////////////////////////////
 
@@ -122,7 +124,7 @@ function getRoundWinner(){
 function getGameWinner() {
   if (P1Total === 2) {
     alert('GAME OVER! PLAYER 1 WINS!!!!');
-  } else if (P2Total) {
+  } else if (P2Total === 2) {
     alert('GAME OVER! PLAYER 2 WINS!!!!');
   }
   //button.click(resetGame);

@@ -1,12 +1,14 @@
 var prompt = $('#prompt');
 var response = $('#response');
 var button = $('#button');
+var resetButton = $('#resetButton');
 button.prop('disabled', false);
 var textarea = $('textarea');
 var P1Time; //This variable will hold the time it took player 1 to complete the prompt
 var P2Time; //This variable will hold the time it took player 2 to complete the prompt
 var P1Total = 0; //This variable will keep track of how many rounds player 1 has won
 var P2Total = 0; //This variable will keep track of how many rounds player 2 has won
+var startPrompt = 'Click the button to start the game';
 
 
 /////////////////////////////SWITCH PLAYER//////////////////////////////////////
@@ -127,15 +129,21 @@ function getGameWinner() {
   } else if (P2Total === 2) {
     alert('GAME OVER! PLAYER 2 WINS!!!!');
   }
-  //button.click(resetGame);
 }
+
+resetButton.click(resetGame);
 
 function resetGame() {
   textarea.val('');
   input = "";
-  button.prop('disabled', true);
+  button.prop('disabled', false);
+  P1Time = 0;
+  P2Time = 0;
   P1Total = 0;
   P2Total = 0;
+  button.click(nextPrompt);
+  prompt.html(startPrompt);
+  var prompts=['This','First prompt','Second prompt','This is the third prompt'];
 }
 
 /////////////////////////////WIN LOGIC//////////////////////////////////////////

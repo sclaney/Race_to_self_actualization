@@ -48,11 +48,11 @@ function nextPrompt(){
   updatePrompt();
   resetStartTime();
   if (whichPlayer === 'Player1') {
-    player1Select.css('background-color', 'blue');
-    player2Select.css('background-color', 'gray');
+    player1Select.css('background-color', '303F9F');
+    player2Select.css('background-color', '9E9E9E');
   } else if (whichPlayer === 'Player2') {
-    player2Select.css('background-color', 'blue');
-    player1Select.css('background-color', 'gray');
+    player2Select.css('background-color', '303F9F');
+    player1Select.css('background-color', '9E9E9E');
   }
 }
 
@@ -154,6 +154,18 @@ function resetGame() {
   button.click(nextPrompt);
   prompt.html(startPrompt);
   var prompts=['This','First prompt','Second prompt','This is the third prompt'];
+  T1R1.css('background-color', '#9E9E9E');
+  T1R1.css('background-color', '#9E9E9E');
+  T1R1.css('background-color', '#9E9E9E');
+  T1R1.css('background-color', '#9E9E9E');
+  T1R1.css('background-color', '#9E9E9E');
+  T2R1.css('background-color', '#9E9E9E');
+  T2R2.css('background-color', '#9E9E9E');
+  T2R3.css('background-color', '#9E9E9E');
+  T2R4.css('background-color', '#9E9E9E');
+  T2R5.css('background-color', '#9E9E9E');
+  player1Select.css('background-color', '#303F9F');
+  player2Select.css('background-color', '#9E9E9E');
 }
 
 /////////////////////////////WIN LOGIC//////////////////////////////////////////
@@ -177,25 +189,34 @@ var player2Select = $('#player2Select');
 
 function colorSwitch() {
   if (P1Total === 1) {
-    T1R1.css('background-color', 'blue');
-  } else if (P1Total === 2) {
-    T1R2.css('background-color', 'blue');
-  } else if (P1Total === 3) {
-    T1R3.css('background-color', 'blue');
-  } else if (P1Total === 4) {
-    T1R4.css('background-color', 'blue');
-  } else if (P1Total === 5) {
-    T1R5.css('background-color', 'blue');
-  } else if (P2Total === 1) {
-    T2R1.css('background-color', 'blue');
-  } else if (P2Total === 2) {
-    T2R2.css('background-color', 'blue');
-  } else if (P2Total === 3) {
-    T2R3.css('background-color', 'blue');
-  } else if (P2Total === 4) {
-    T2R4.css('background-color', 'blue');
-  } else if (P2Total === 5) {
-    T2R5.css('background-color', 'blue');
+    T1R1.css('background-color', '#FF3A2D');
+  }
+  if (P1Total === 2) {
+    T1R2.css('background-color', '#FF2D55');
+  }
+  if (P1Total === 3) {
+    T1R3.css('background-color', '#FFDB4C');
+  }
+  if (P1Total === 4) {
+    T1R4.css('background-color', '#4CD964');
+  }
+  if (P1Total === 5) {
+    T1R5.css('background-color', '#007AFF');
+  }
+  if (P2Total === 1) {
+    T2R1.css('background-color', '#FF3A2D');
+  }
+  if (P2Total === 2) {
+    T2R2.css('background-color', '#FF2D55');
+  }
+  if (P2Total === 3) {
+    T2R3.css('background-color', '#FFDB4C');
+  }
+  if (P2Total === 4) {
+    T2R4.css('background-color', '#4CD964');
+  }
+  if (P2Total === 5) {
+    T2R5.css('background-color', '#007AFF');
   }
 }
 

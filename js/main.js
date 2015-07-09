@@ -33,7 +33,7 @@ function playerSwitch() {
 
 
 // This is the array that holds all the prompts
-var prompts=[' This',' First prompt',' Second prompt',' This is the third prompt'];
+var prompts=['This','First prompt','Second prompt','This is the third prompt'];
 
 // Here's the event listener that loads a new prompt when the button is clicked
 // It still needs more logic to delete a prompt once it has been used once.
@@ -57,8 +57,8 @@ function updatePrompt() {
 }
 
 function resetStuff() {
-  textarea.val(' ');
-  input = " ";
+  textarea.val('');
+  input = "";
   button.prop('disabled', true);
 }
 
@@ -131,8 +131,8 @@ function getGameWinner() {
 }
 
 function resetGame() {
-  textarea.val(' ');
-  input = " ";
+  textarea.val('');
+  input = "";
   button.prop('disabled', true);
   P1Total = 0;
   P2Total = 0;

@@ -35,11 +35,6 @@ body{
   margin: 120px auto;
 }
 
-.main #button{
-  margin: -70px 0 0 300px;
-  position: relative;
-}
-
 textarea{
   height: 212px;
   width: 712px;
@@ -48,11 +43,131 @@ textarea{
   font-size: 15px;
 }
 
+.main .buttons{
+  width: 250px;
+  height: 30px;
+  display: inline-block;
+  margin: -70 0 0 220px;
+}
 
+.main #button{
+  width: 120.578px;
+  height: 25px;
+  position: relative;
+}
 
+.main #resetButton{
+  width: 120.578px;
+  height: 25px;
+  padding: 2 6 3 6px;
+}
 
+/*This is where the levels start*/
+.triangle1 {
+  width: 900px;
+  height: 900px;
 
+  margin: -105 0 0 20px;
 
+}
 
+.triangle1 .T1R1{
+  height: 50px;
+  width: 300px;
+  background-color: red;
+}
+
+.triangle1 .T1R2{
+  height: 50px;
+  width: 300px;
+  background-color: red;
+
+  margin: -105 0 0 0px;
+}
+
+.triangle1 .T1R3{
+  height: 50px;
+  width: 300px;
+  background-color: red;
+
+  margin: -105 0 0 0px;
+}
+
+.triangle1 .T1R4{
+  height: 50px;
+  width: 300px;
+  background-color: red;
+
+  margin: -105 0 0 0px;
+}
+
+.triangle1 .T1R5{
+  height: 50px;
+  width: 300px;
+  background-color: red;
+
+  margin: -105 0 0 0px;
+}
+
+.triangle1 .player1{
+  height: 50px;
+  width: 300px;
+  background-color: red;
+
+  margin: -105 0 0 0px;
+}
+
+.triangle2 {
+  width: 300px;
+  height: 300px;
+
+  margin: -900 0 0 1060px;
+}
+
+.triangle2 .T2R1{
+  height: 50px;
+  width: 300px;
+  background-color: red;
+}
+
+.triangle2 .T2R2{
+  height: 50px;
+  width: 300px;
+  background-color: red;
+
+  margin: -105 0 0 0px;
+}
+
+.triangle2 .T2R3{
+  height: 50px;
+  width: 300px;
+  background-color: red;
+
+  margin: -105 0 0 0px;
+}
+
+.triangle2 .T2R4{
+  height: 50px;
+  width: 300px;
+  background-color: red;
+
+  margin: -105 0 0 0px;
+}
+
+.triangle2 .T2R5{
+  height: 50px;
+  width: 300px;
+  background-color: red;
+
+  margin: -105 0 0 0px;
+}
+
+.triangle2 .player2{
+  height: 50px;
+  width: 300px;
+  background-color: red;
+
+  margin: -105 0 0 0px;
+}
 
 

@@ -121,12 +121,13 @@ function getRoundWinner(){
     alert('Player 2 has won this round!');
     P2Total += 1;
   }
+  colorSwitch();
 }
 
 function getGameWinner() {
-  if (P1Total === 2) {
+  if (P1Total === 5) {
     alert('GAME OVER! PLAYER 1 WINS!!!!');
-  } else if (P2Total === 2) {
+  } else if (P2Total === 5) {
     alert('GAME OVER! PLAYER 2 WINS!!!!');
   }
 }
@@ -148,3 +149,49 @@ function resetGame() {
 
 /////////////////////////////WIN LOGIC//////////////////////////////////////////
 
+////////////////////////////COLOR CHANGE////////////////////////////////////////
+
+var T1R1 = $('#T1R1');
+var T1R2 = $('#T1R2');
+var T1R3 = $('#T1R3');
+var T1R4 = $('#T1R4');
+var T1R5 = $('#T1R5');
+
+var T2R1 = $('#T2R1');
+var T2R2 = $('#T2R2');
+var T2R3 = $('#T2R3');
+var T2R4 = $('#T2R4');
+var T2R5 = $('#T2R5');
+
+var player1Select = $('#player1Select');
+var player2Select = $('#player2Select');
+
+function colorSwitch() {
+  if (P1Total === 1) {
+    T1R1.css('background-color', 'blue');
+  } else if (P1Total === 2) {
+    T1R2.css('background-color', 'blue');
+  } else if (P1Total === 3) {
+    T1R3.css('background-color', 'blue');
+  } else if (P1Total === 4) {
+    T1R4.css('background-color', 'blue');
+  } else if (P1Total === 5) {
+    T1R5.css('background-color', 'blue');
+  } else if (P2Total === 1) {
+    T2R1.css('background-color', 'blue');
+  } else if (P2Total === 2) {
+    T2R2.css('background-color', 'blue');
+  } else if (P2Total === 3) {
+    T2R3.css('background-color', 'blue');
+  } else if (P2Total === 4) {
+    T2R4.css('background-color', 'blue');
+  } else if (P2Total === 5) {
+    T2R5.css('background-color', 'blue');
+  }
+}
+
+
+
+
+
+////////////////////////////COLOR CHANGE////////////////////////////////////////

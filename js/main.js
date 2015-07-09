@@ -48,10 +48,10 @@ function nextPrompt(){
   updatePrompt();
   resetStartTime();
   if (whichPlayer === 'Player1') {
-    player1Select.css('background-color', '303F9F');
+    player1Select.css('background-color', 'E91E63');
     player2Select.css('background-color', '9E9E9E');
   } else if (whichPlayer === 'Player2') {
-    player2Select.css('background-color', '303F9F');
+    player2Select.css('background-color', 'E91E63');
     player1Select.css('background-color', '9E9E9E');
   }
 }
@@ -109,6 +109,12 @@ textarea.keydown(function() {
     input = input.substring(0, input.length -1);
     console.log(input);
   }
+  if (event.which === 13) {
+    nextPrompt();
+  }
+  if (event.which === 37 || event.which === 38 || event.which === 39 || event.which === 40) {
+    return false;
+  }
 });
 
 /////////////////////////////KEYBOARD PRESS/////////////////////////////////////
@@ -153,7 +159,7 @@ function resetGame() {
   P2Total = 0;
   button.click(nextPrompt);
   prompt.html(startPrompt);
-  var prompts=['This','First prompt','Second prompt','This is the third prompt'];
+  prompts=['This','First prompt','Second prompt','This is the third prompt'];
   T1R1.css('background-color', '#9E9E9E');
   T1R1.css('background-color', '#9E9E9E');
   T1R1.css('background-color', '#9E9E9E');
@@ -164,7 +170,7 @@ function resetGame() {
   T2R3.css('background-color', '#9E9E9E');
   T2R4.css('background-color', '#9E9E9E');
   T2R5.css('background-color', '#9E9E9E');
-  player1Select.css('background-color', '#303F9F');
+  player1Select.css('background-color', '#E91E63');
   player2Select.css('background-color', '#9E9E9E');
 }
 
@@ -189,34 +195,34 @@ var player2Select = $('#player2Select');
 
 function colorSwitch() {
   if (P1Total === 1) {
-    T1R1.css('background-color', '#FF3A2D');
+    T1R1.css('background-color', '#FF5722');
   }
   if (P1Total === 2) {
-    T1R2.css('background-color', '#FF2D55');
+    T1R2.css('background-color', '#FFEB3B');
   }
   if (P1Total === 3) {
-    T1R3.css('background-color', '#FFDB4C');
+    T1R3.css('background-color', '#CDDC39');
   }
   if (P1Total === 4) {
-    T1R4.css('background-color', '#4CD964');
+    T1R4.css('background-color', '#4CAF50');
   }
   if (P1Total === 5) {
-    T1R5.css('background-color', '#007AFF');
+    T1R5.css('background-color', '#03A9F4');
   }
   if (P2Total === 1) {
-    T2R1.css('background-color', '#FF3A2D');
+    T2R1.css('background-color', '#FF5722');
   }
   if (P2Total === 2) {
-    T2R2.css('background-color', '#FF2D55');
+    T2R2.css('background-color', '#FFEB3B');
   }
   if (P2Total === 3) {
-    T2R3.css('background-color', '#FFDB4C');
+    T2R3.css('background-color', '#CDDC39');
   }
   if (P2Total === 4) {
-    T2R4.css('background-color', '#4CD964');
+    T2R4.css('background-color', '#4CAF50');
   }
   if (P2Total === 5) {
-    T2R5.css('background-color', '#007AFF');
+    T2R5.css('background-color', '#03A9F4');
   }
 }
 

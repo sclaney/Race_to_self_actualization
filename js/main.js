@@ -167,10 +167,10 @@ function resetGame() {
   prompt.html(startPrompt);
   prompts=['This','First prompt','Second prompt','This is the third prompt'];
   T1R1.css('background-color', '#9E9E9E');
-  T1R1.css('background-color', '#9E9E9E');
-  T1R1.css('background-color', '#9E9E9E');
-  T1R1.css('background-color', '#9E9E9E');
-  T1R1.css('background-color', '#9E9E9E');
+  T1R2.css('background-color', '#9E9E9E');
+  T1R3.css('background-color', '#9E9E9E');
+  T1R4.css('background-color', '#9E9E9E');
+  T1R5.css('background-color', '#9E9E9E');
   T2R1.css('background-color', '#9E9E9E');
   T2R2.css('background-color', '#9E9E9E');
   T2R3.css('background-color', '#9E9E9E');

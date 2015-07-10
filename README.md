@@ -1,4 +1,4 @@
-###Race to Self-Actualization!
+#Race to Self-Actualization!
 
 ##Description
 - This is a game that will allow two people to face off in a typing challange. 
@@ -26,6 +26,16 @@
 - As a player, I want the name of whoever's turn it is to be highligted so I know whose turn it is
 - As a psych-nerd, I want information on each level of the pyramid to learn more about the heirarchy
 - As a psych-nerd, I want all the prompts to be relevant to the level of needs I'm trying to fulfill
+
+##MVP
+- load new prompts on click
+- log and compare player times and determine winner
+- keep score and end game at 5 wins
+- have a reset button to start a new game
+
+##On going
+- resetting prompts normally
+- a few other features
 
 ##Technologies
 - Used HTML and CSS to make and style the webpage and create the necessary buttons

@@ -69,6 +69,7 @@ function resetStuff() {
   textarea.val('');
   input = "";
   button.prop('disabled', true);
+  button.css('background-color', '#9E9E9E');
 }
 
 
@@ -93,7 +94,8 @@ textarea.keypress(function() {  //when there is a keypress in the textarea
     var endTimer = new Date().getTime(); //then the timer stops
     totalTime = ((endTimer - startTimer)/1000); //and we take the end time and subtract is from start time and divide it by 1000 to get time in seconds
     alert("You did it! It took " + totalTime + " seconds to finish."); //then an alert tells you you are finished and shows you your time
-    button.prop('disabled', false); //then the button becomes clickable to start the next round
+    button.prop('disabled', false);
+    button.css('background-color', '#2196F3'); //then the button becomes clickable to start the next round
     if (whichPlayer === 'Player1') { //then we say if the player is player 1
       P1Time = totalTime; //add this total time to the variable for their time
     } else if (whichPlayer === 'Player2'){ //and if it's player 2
@@ -111,6 +113,7 @@ textarea.keydown(function() {
   }
   if (event.which === 13) {
     nextPrompt();
+    return false;
   }
   if (event.which === 37 || event.which === 38 || event.which === 39 || event.which === 40) {
     return false;
@@ -141,9 +144,11 @@ function getGameWinner() {
   if (P1Total === 5) {
     alert('GAME OVER! PLAYER 1 WINS!!!!');
     button.prop('disabled', true);
+    button.css('background-color', '#9E9E9E');
   } else if (P2Total === 5) {
     alert('GAME OVER! PLAYER 2 WINS!!!!');
     button.prop('disabled', true);
+    button.css('background-color', '#9E9E9E');
   }
 }
 
@@ -158,6 +163,7 @@ function resetGame() {
   P1Total = 0;
   P2Total = 0;
   button.click(nextPrompt);
+  button.css('background-color', '#2196F3');
   prompt.html(startPrompt);
   prompts=['This','First prompt','Second prompt','This is the third prompt'];
   T1R1.css('background-color', '#9E9E9E');

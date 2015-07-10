@@ -38,16 +38,14 @@ function playerSwitch() {
 var prompts=['This','First prompt','Second prompt','This is the third prompt'];
 
 // Here's the event listener that loads a new prompt when the button is clicked
-// It still needs more logic to delete a prompt once it has been used once.
-// It also needs to only be clickable when a round is over
-button.click(nextPrompt);
+button.click(nextPrompt); //clicking the buttons sets off a chain reaction of functions
 
-function nextPrompt(){
+function nextPrompt(){ //this function removes the first prompt in the array and puts it in back
   var shiftedValue = prompts.shift();
   prompts.push(shiftedValue);
   updatePrompt();
   resetStartTime();
-  if (whichPlayer === 'Player1') {
+  if (whichPlayer === 'Player1') { //this sets the new colors based on which players turn it is
     player1Select.css('background-color', 'E91E63');
     player2Select.css('background-color', '9E9E9E');
   } else if (whichPlayer === 'Player2') {
@@ -56,16 +54,16 @@ function nextPrompt(){
   }
 }
 
-function resetStartTime() {
+function resetStartTime() { //this is the function that starts the timer
   startTimer = new Date().getTime();
 }
 
-function updatePrompt() {
+function updatePrompt() { //this displays the first prompt in the array
   prompt.html(prompts[0]);
   resetStuff();
 }
 
-function resetStuff() {
+function resetStuff() { //this resets the game for the next round
   textarea.val('');
   input = "";
   button.prop('disabled', true);
@@ -106,17 +104,17 @@ textarea.keypress(function() {  //when there is a keypress in the textarea
   }
 });
 
-textarea.keydown(function() {
+textarea.keydown(function() { //this makes it so hitting the delete button actually deletes the input string
   if(event.which === 8) { //delete is key code 8
     input = input.substring(0, input.length -1);
     console.log(input);
   }
-  if (event.which === 13) {
+  if (event.which === 13) { //this makes it so pressing enter starts the next round and nothing else
     nextPrompt();
     return false;
   }
   if (event.which === 37 || event.which === 38 || event.which === 39 || event.which === 40) {
-    return false;
+    return false; //this makes it so you can't use your arrow keys to move around the textarea
   }
 });
 
@@ -126,7 +124,7 @@ textarea.keydown(function() {
 /////////////////////////////WIN LOGIC//////////////////////////////////////////
 
 
-// This is where the win logic will go, it will compare P1Time to P2Time to determine the winner
+// This will compare P1Time to P2Time to determine the winner
 function getRoundWinner(){
   console.log("Player one's time: " + P1Time);
   console.log("Player two time: " + P2Time);
@@ -137,14 +135,14 @@ function getRoundWinner(){
     alert('Player 2 has won this round!');
     P2Total += 1;
   }
-  colorSwitch();
+  colorSwitch(); //and then run through a color switch function to set the scoreboard
 }
 
-function getGameWinner() {
+function getGameWinner() { //this determines if someone has won the round, and only fires after player 2's turn
   if (P1Total === 5) {
     alert('GAME OVER! PLAYER 1 WINS!!!!');
     button.prop('disabled', true);
-    button.css('background-color', '#9E9E9E');
+    button.css('background-color', '#9E9E9E'); //this makes it so you can press the button to start next round
   } else if (P2Total === 5) {
     alert('GAME OVER! PLAYER 2 WINS!!!!');
     button.prop('disabled', true);
@@ -152,9 +150,10 @@ function getGameWinner() {
   }
 }
 
+//here's the functionality for the reset button
 resetButton.click(resetGame);
 
-function resetGame() {
+function resetGame() { //this resets all the colors, inputs, scores, and prompts, but not the prompt array for some reason
   textarea.val('');
   input = "";
   button.prop('disabled', false);
@@ -199,7 +198,7 @@ var T2R5 = $('#T2R5');
 var player1Select = $('#player1Select');
 var player2Select = $('#player2Select');
 
-function colorSwitch() {
+function colorSwitch() { //this is the function that checks the total score and updates the score board
   if (P1Total === 1) {
     T1R1.css('background-color', '#FF5722');
   }

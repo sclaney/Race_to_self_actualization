@@ -1,3 +1,9 @@
+This project was made a really long time while I was at General Assembly and I believe it's broken now. But still a fun project.
+
+
+-----------------------------
+
+
 #Race to Self-Actualization!
 
 ##Description
